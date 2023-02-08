@@ -1,4 +1,4 @@
-# [demo link](https://resonant-maamoul-af3681.netlify.app/auth)
+# [demo link](https://resonant-maamoul-af3681.netlify.app)
 
 # SecondAngularProject
 

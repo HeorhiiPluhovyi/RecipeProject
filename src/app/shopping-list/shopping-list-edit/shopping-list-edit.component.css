@@ -1,0 +1,15 @@
+input.ng-invalid.ng-touched {
+  border-color: rgb(255, 99, 71);
+}
+
+input.ng-invalid.ng-touched:focus {
+  box-shadow: 0 0 8px rgb(255 99 71 / 60%);
+}
+
+button {
+  margin-left: 10px;
+}
+
+button:first-child {
+  margin-left: 0px;
+}

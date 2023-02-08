@@ -1,0 +1,23 @@
+.m-top-20 {
+  margin-top: 20px;
+}
+
+.visibility {
+  visibility: hidden;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: rgb(255, 99, 71);
+}
+
+input.ng-invalid.ng-touched:focus {
+  box-shadow: 0 0 8px rgb(255 99 71 / 60%);
+}
+
+textarea.ng-invalid.ng-touched {
+  border-color: rgb(255, 99, 71);
+}
+
+textarea.ng-invalid.ng-touched:focus {
+  box-shadow: 0 0 8px rgb(255 99 71 / 60%);
+}

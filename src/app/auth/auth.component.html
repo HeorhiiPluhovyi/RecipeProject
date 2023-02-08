@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-6-offset-3">
+    <div *ngIf="error" class="alert alert-danger">
+      <p>{{ error }}</p>
+    </div>
+
+    <!-- <app-alert [massage]="error" *ngIf="error" (close)="onHandleError()"></app-alert> -->
+    <form
+      *ngIf="!isLoading"
+      [formGroup]="form"
+      (submit)="submit()"
+    >
+      <div class="form-group">
+        <label for="email" class="control-label">E-Mail:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          formControlName="email"
+        >
+      </div>
+      <div class="form-group">
+        <label for="password" class="control-label">Password</label>
+        <input
+          [type]="isShowPassword ? 'text' : 'password'"
+          name="password"
+          id="password"
+          class="form-control"
+          formControlName="password"
+        >
+        <label>
+          <input type="checkbox" (click)="onShowPassword()">
+          Show password
+        </label>
+      </div>
+      <div class="form-group">
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="form.invalid"
+          >
+          {{ loginMode ? 'Login' : 'Sing up' }}
+        </button>
+        |
+        <button
+          class="btn btn-primary"
+          type="button"
+          (click)="onSwitchMode()"
+        >
+          {{ loginMode ? 'Switch to sing up' : 'Switch to login' }}
+        </button>
+      </div>
+    </form>
+    <div style="text-align: center;" *ngIf="isLoading">
+      <app-loading></app-loading>
+    </div>
+  </div>
+</div>
